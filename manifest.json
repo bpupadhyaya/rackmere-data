@@ -1,0 +1,347 @@
+{
+ "schema": 1,
+ "generated": "2026-11-22T20:48:13Z",
+ "totalBytes": 533496,
+ "limits": {
+  "maxLayerBytes": 1500000,
+  "maxTotalBytes": 8000000
+ },
+ "layers": [
+  {
+   "id": "nasa-power-climate",
+   "title": "Climate normals at region points (NASA POWER)",
+   "theme": "climate",
+   "file": "layers/nasa-power-climate.json",
+   "sha256": "6967a1d2ec0a55498e8d3baebcb77cdc300e1d4cc969517cf84650ec249f76fb",
+   "bytes": 11209,
+   "version": "power-2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "NASA POWER Climatology API (MERRA-2)",
+    "url": "https://power.larc.nasa.gov/docs/",
+    "licence": "NASA open data; acknowledge NASA POWER",
+    "attribution": "Data from the NASA Langley Research Center POWER Project funded through the NASA Earth Science Directorate Applied Science Program"
+   },
+   "kind": "regionValues",
+   "notes": "Monthly means at about 0.5 degree resolution; they understate the extreme (99th percentile) design conditions used for cooling design. Not ASHRAE design data.",
+   "coverage": "All regions"
+  },
+  {
+   "id": "noaa-normals",
+   "title": "US climate normals 1991-2020 (NOAA)",
+   "theme": "climate",
+   "file": "layers/noaa-normals.json",
+   "sha256": "0efa6e97804d85ba1893586081c27319980a43387e51adf6b05ad8c445c7572a",
+   "bytes": 6155,
+   "version": "1991-2020",
+   "asOf": "2020-12-31",
+   "checked": "2026-11-22",
+   "refreshDays": 3650,
+   "source": {
+    "name": "NOAA NCEI U.S. Climate Normals 1991-2020",
+    "url": "https://www.ncei.noaa.gov/products/land-based-station/us-climate-normals",
+    "licence": "US Government work, public domain",
+    "attribution": "Source: NOAA National Centers for Environmental Information"
+   },
+   "kind": "regionValues",
+   "notes": "Station may be up to 80 km from the market centroid. Normals are decadal; refresh interval is long.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "overlay-interconnection-facilities",
+   "title": "Interconnection facilities with 20+ networks (global)",
+   "theme": "connectivity",
+   "file": "layers/overlay-interconnection-facilities.json",
+   "sha256": "85b9276e2373f3e53c0721dc3921f000a127ef953a9fae244c88d57840ed4034",
+   "bytes": 66443,
+   "version": "2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 30,
+   "source": {
+    "name": "PeeringDB (facilities, internet exchanges)",
+    "url": "https://www.peeringdb.com/",
+    "licence": "PeeringDB Acceptable Use Policy (public data, attribution); only derived counts and unnamed points republished",
+    "attribution": "Data from PeeringDB (peeringdb.com), used per its Acceptable Use Policy"
+   },
+   "kind": "geojson",
+   "notes": "Unnamed points; network counts self-reported by operators.",
+   "coverage": "Global"
+  },
+  {
+   "id": "peeringdb-metro",
+   "title": "Network facilities and exchanges near each market",
+   "theme": "connectivity",
+   "file": "layers/peeringdb-metro.json",
+   "sha256": "f207b3106322cfe415e697fe8bb6ec32b165387e13d9213a8e89dcd42ab5bd74",
+   "bytes": 9342,
+   "version": "2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 30,
+   "source": {
+    "name": "PeeringDB (facilities, internet exchanges)",
+    "url": "https://www.peeringdb.com/",
+    "licence": "PeeringDB Acceptable Use Policy (public data, attribution); only derived counts and unnamed points republished",
+    "attribution": "Data from PeeringDB (peeringdb.com), used per its Acceptable Use Policy"
+   },
+   "kind": "regionValues",
+   "notes": "Self-reported, user-maintained registry; undercounts private facilities and some regions. Counts are a connectivity proxy, not route diversity.",
+   "coverage": "All regions"
+  },
+  {
+   "id": "live-scores",
+   "title": "Live indicator scores derived from fetched layers",
+   "theme": "derived",
+   "file": "layers/live-scores.json",
+   "sha256": "7c3794e5514a76052a925c8580ac7aff445f9991639cf28a2e6493216bd21c18",
+   "bytes": 19837,
+   "version": "2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 7,
+   "source": {
+    "name": "Derived by Rackmere from the layers listed in each region's 'from' map",
+    "url": "https://bpupadhyaya.github.io/rackmere-data/",
+    "licence": "Derived data; each input layer keeps its own licence and attribution",
+    "attribution": "Computed from the cited source layers"
+   },
+   "kind": "regionValues",
+   "notes": "Recomputed on every refresh. Educational proxies, not site data.",
+   "coverage": "All regions where inputs exist"
+  },
+  {
+   "id": "egrid-carbon",
+   "title": "US grid carbon intensity (eGRID subregion)",
+   "theme": "emissions",
+   "file": "layers/egrid-carbon.json",
+   "sha256": "5d9c5c6f85719753c8f91f4e88b001fb5e8710c3919ba7746731b46214fdd357",
+   "bytes": 7055,
+   "version": "egrid2023",
+   "asOf": "2023-12-31",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "U.S. EPA eGRID2023 (subregion output emission rates)",
+    "url": "https://www.epa.gov/egrid",
+    "licence": "US Government work, public domain",
+    "attribution": "Source: U.S. EPA, eGRID2023"
+   },
+   "kind": "regionValues",
+   "notes": "Annual-average location-based rate; hourly and market-based values differ. Subregion found by point-in-polygon on EPA's service.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "ember-carbon",
+   "title": "National grid carbon intensity and clean share (Ember)",
+   "theme": "emissions",
+   "file": "layers/ember-carbon.json",
+   "sha256": "bf1fc03f1ad31acaae50fd0b8a4f24cfd35c6d88dc1d724bc1413af92067e24f",
+   "bytes": 5219,
+   "version": "y2025",
+   "asOf": "2025-12-31",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "Ember, Yearly Electricity Data",
+    "url": "https://ember-energy.org/data/yearly-electricity-data/",
+    "licence": "CC BY 4.0",
+    "attribution": "Ember (ember-energy.org), CC BY 4.0"
+   },
+   "kind": "regionValues",
+   "notes": "National averages applied to each market; the market-level grid can differ. Includes US regions' national value for context.",
+   "coverage": "All regions (national)"
+  },
+  {
+   "id": "fema-nri",
+   "title": "FEMA National Risk Index (county)",
+   "theme": "hazard",
+   "file": "layers/fema-nri.json",
+   "sha256": "074783e66bdbe72a2003581db9703739d4ec1a5d46108a91b17810e47cd07fef",
+   "bytes": 13655,
+   "version": "December 2025",
+   "asOf": "2026-11-02",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "FEMA National Risk Index",
+    "url": "https://hazards.fema.gov/nri/",
+    "licence": "US Government work (FEMA); data open, cite FEMA",
+    "attribution": "Source: FEMA National Risk Index"
+   },
+   "kind": "regionValues",
+   "notes": "County values, not site values. Scores are relative national percentiles of expected annual loss x social vulnerability / resilience, not probabilities.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "usgs-seismic",
+   "title": "US seismic design ground motion (USGS)",
+   "theme": "hazard",
+   "file": "layers/usgs-seismic.json",
+   "sha256": "0b72839acdf7076c694d51b05b1e67657a223241c811a5642ed1aad73a1368ed",
+   "bytes": 2772,
+   "version": "asce7-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "USGS Seismic Design Web Services (ASCE 7-22, 2020 NEHRP-based hazard)",
+    "url": "https://earthquake.usgs.gov/ws/designmaps/",
+    "licence": "US Government work, public domain",
+    "attribution": "Source: U.S. Geological Survey"
+   },
+   "kind": "regionValues",
+   "notes": "Design-code ground motion at the market centroid; site-specific hazard studies are needed for real sites.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "worldbank-wgi",
+   "title": "Governance indicators (World Bank WGI)",
+   "theme": "policy",
+   "file": "layers/worldbank-wgi.json",
+   "sha256": "276a14c0c2fd345a7b8e2aaa5212d242c2b0145fcd55c77da687113850c7c8f4",
+   "bytes": 12157,
+   "version": "y2025",
+   "asOf": "2025-12-31",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "World Bank, Worldwide Governance Indicators",
+    "url": "https://www.worldbank.org/en/publication/worldwide-governance-indicators",
+    "licence": "CC BY 4.0",
+    "attribution": "World Bank, Worldwide Governance Indicators (Kaufmann and Kraay), CC BY 4.0"
+   },
+   "kind": "regionValues",
+   "notes": "Country-level perception indicators; not a prediction of project outcomes; says nothing about a city or state.",
+   "coverage": "All regions (national)"
+  },
+  {
+   "id": "eia-industrial-price",
+   "title": "US industrial electricity price by state",
+   "theme": "power",
+   "file": "layers/eia-industrial-price.json",
+   "sha256": "8bef3311d0a9d393eac05ddd881f8d4c55fdfd16e927d6625c7c3ff8c6ceaf49",
+   "bytes": 9349,
+   "version": "unknown",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 45,
+   "source": {
+    "name": "U.S. EIA, Electric Power Monthly Table 5.6.A (Form EIA-861M)",
+    "url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=table_5_06_a",
+    "licence": "US Government work, public domain (EIA asks for citation)",
+    "attribution": "Source: U.S. Energy Information Administration"
+   },
+   "kind": "regionValues",
+   "notes": "State-average industrial price for the latest month (preliminary). Not a utility tariff; excludes demand-charge detail.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "eurostat-industrial-price",
+   "title": "EU industrial electricity price (Eurostat)",
+   "theme": "power",
+   "file": "layers/eurostat-industrial-price.json",
+   "sha256": "976c04dbf5d2c7396f8144d41f82a5064f424ad7e8ed3646aa81f701581d8789",
+   "bytes": 1139,
+   "version": "2026-S1",
+   "asOf": "2026-10-19",
+   "checked": "2026-11-22",
+   "refreshDays": 190,
+   "source": {
+    "name": "Eurostat nrg_pc_205 (electricity prices for non-household consumers)",
+    "url": "https://ec.europa.eu/eurostat/databrowser/view/nrg_pc_205/default/table",
+    "licence": "CC BY 4.0 (Eurostat reuse policy)",
+    "attribution": "Source: Eurostat (nrg_pc_205)"
+   },
+   "kind": "regionValues",
+   "notes": "National half-yearly averages for a mid-size industrial band; large data centres often pay differently (own contracts). Bi-annual release.",
+   "coverage": "EU/EEA countries in the region set"
+  },
+  {
+   "id": "hifld-grid",
+   "title": "Grid proximity (substations and lines near each US market)",
+   "theme": "power",
+   "file": "layers/hifld-grid.json",
+   "sha256": "9a3e5fe180dd8ff2259bfd78aed39ef97e628b3c78d69e522266c1782b20ccab",
+   "bytes": 14575,
+   "version": "hifld-2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "HIFLD Electric Substations and Transmission Lines",
+    "url": "https://hifld-geoplatform.opendata.arcgis.com/",
+    "licence": "Public domain (US Government HIFLD open data release)",
+    "attribution": "Source: DHS/CISA HIFLD (mirror hosted on ArcGIS Online)"
+   },
+   "kind": "regionValues",
+   "notes": "Proximity of high-voltage facilities is not capacity or headroom. Data vintage is that of the HIFLD release, which can be years old.",
+   "coverage": "US regions"
+  },
+  {
+   "id": "overlay-hv-lines",
+   "title": "Transmission lines at 345 kV and above (US, simplified)",
+   "theme": "power",
+   "file": "layers/overlay-hv-lines.json",
+   "sha256": "2d18baa3ed6c8554cc98644cc7d90966b92dec4d232b9b320abb64ad4f5e495c",
+   "bytes": 196612,
+   "version": "hifld-2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "HIFLD Electric Power Transmission Lines (public-domain US infrastructure data)",
+    "url": "https://hifld-geoplatform.opendata.arcgis.com/",
+    "licence": "Public domain (US Government HIFLD open data release); source field cites OpenStreetMap contributors for some segments",
+    "attribution": "Source: DHS/CISA HIFLD Electric Power Transmission Lines (mirror hosted on ArcGIS Online); some geometry derived from OpenStreetMap contributors"
+   },
+   "kind": "geojson",
+   "notes": "Simplified to about 1 km; coarse visual overlay, not engineering data.",
+   "coverage": "United States"
+  },
+  {
+   "id": "overlay-hv-substations",
+   "title": "Substations at 345 kV and above (US)",
+   "theme": "power",
+   "file": "layers/overlay-hv-substations.json",
+   "sha256": "b564628674adec2d2a2eef30806e8c43a4a3067c0c8221202f7d3193f1102cfb",
+   "bytes": 149969,
+   "version": "hifld-2026-11-22",
+   "asOf": "2026-11-22",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "HIFLD Electric Substations (public-domain US infrastructure data)",
+    "url": "https://hifld-geoplatform.opendata.arcgis.com/",
+    "licence": "Public domain (US Government HIFLD open data release)",
+    "attribution": "Source: DHS/CISA HIFLD Electric Substations (mirror hosted on ArcGIS Online)"
+   },
+   "kind": "geojson",
+   "notes": "Positions rounded to 0.01 degree (about 1 km). Voltage as recorded; may be outdated. No headroom/capacity information is public.",
+   "coverage": "United States"
+  },
+  {
+   "id": "wri-aqueduct",
+   "title": "Water stress (WRI Aqueduct 4.0)",
+   "theme": "water",
+   "file": "layers/wri-aqueduct.json",
+   "sha256": "d8a2eca434c0eba4cdf7ef6f46feba41441a050d565c42a9ebbf7e77cb78eeb1",
+   "bytes": 8008,
+   "version": "aqueduct-4.0-2023",
+   "asOf": "2023-07-05",
+   "checked": "2026-11-22",
+   "refreshDays": 365,
+   "source": {
+    "name": "WRI Aqueduct 4.0 Water Risk Atlas (baseline annual)",
+    "url": "https://www.wri.org/aqueduct",
+    "licence": "CC BY 4.0",
+    "attribution": "World Resources Institute, Aqueduct 4.0 (Kuzma et al. 2023), CC BY 4.0"
+   },
+   "kind": "regionValues",
+   "notes": "Admin-1 or country area-weighted mean, not the sub-basin at the site: a point-in-basin lookup needs GIS tooling. Local supply and water rights can differ strongly.",
+   "coverage": "All regions (state/province or country level)"
+  }
+ ]
+}
