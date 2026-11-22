@@ -1,7 +1,7 @@
 {
  "schema": 1,
- "generated": "2026-11-22T20:48:13Z",
- "totalBytes": 533496,
+ "generated": "2026-11-22T20:52:24Z",
+ "totalBytes": 533504,
  "limits": {
   "maxLayerBytes": 1500000,
   "maxTotalBytes": 8000000
@@ -222,10 +222,10 @@
    "title": "US industrial electricity price by state",
    "theme": "power",
    "file": "layers/eia-industrial-price.json",
-   "sha256": "8bef3311d0a9d393eac05ddd881f8d4c55fdfd16e927d6625c7c3ff8c6ceaf49",
-   "bytes": 9349,
-   "version": "unknown",
-   "asOf": "2026-11-22",
+   "sha256": "c0de5805174bb381f7143d9d070c9ccbcd1030e2ca7e9dddacea48babc3994c8",
+   "bytes": 9357,
+   "version": "august-2026",
+   "asOf": "2026-08-01",
    "checked": "2026-11-22",
    "refreshDays": 45,
    "source": {
