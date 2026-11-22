@@ -954,7 +954,7 @@
    "attribution": "Source: U.S. Energy Information Administration",
    "version": "august-2026",
    "asOf": "2026-08-01",
-   "refreshDays": 45,
+   "refreshDays": 100,
    "kind": "regionValues",
    "bytes": 9357,
    "coverage": "US regions",
